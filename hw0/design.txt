@@ -1,0 +1,25 @@
+// create a library for data parsing
+
+namespace Hpc0 {
+
+class DParser {
+
+public:
+  // declaration should go in the header,
+  put the implementation inside the .cpp file
+  typedef struct Datum {
+    double lon;
+    double lat;
+    int delta_x;
+    int delta_y;
+    double features[21];
+    // something that can hold 0-20 small values (3.22478e-09)
+    // these can apparently be stored as doubles too
+    http://www.cplusplus.com/reference/ios/scientific/
+  }Datum;
+
+private:
+  std::vector<Datum> d_container;
+};
+
+} // namespace
